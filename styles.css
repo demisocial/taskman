@@ -1,0 +1,129 @@
+body {
+    background-color: #59b1f9;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 25%;
+    background-color: #fff;
+    color: #696969;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .task-manager {
+    width: 75%;
+    padding: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #696969;
+  }
+  
+  #task-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    min-height: 50px;  /* adjust this value as needed */
+    justify-content: space-between;
+    align-items: right;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    color: #696969;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: #fff;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .task-title {
+    color: #000;
+    padding: 10px 0;
+  }
+
+  .task-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    display: none;
+    background-color: #ccc;
+    color: #000000;
+  }
+  
+  .task-container.active {
+    display: block;
+  }
+  
+  .subtask-item {
+    display: flex;
+    align-items: left;
+    margin-bottom: 5px;
+  }
+  
+  .subtask-list {
+    padding: 20px;
+  }
+
+  .subtask-item input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .subtask-button {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .expand-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #696969;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    padding-top: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .hide-button {
+    margin: 20px;
+    background-color: #696969;
+  }
+
+  .add-task {
+    background-color: #696969;
+  }
+  

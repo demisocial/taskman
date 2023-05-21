@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul class="sidebar-list">
+        <li class="sidebar-item">Overview</li>
+        <li class="sidebar-item">My Tasks</li>
+        <li class="sidebar-item">Calendar</li>
+        <li class="sidebar-item">Help/Guide</li>
+        <li class="sidebar-item">Settings</li>
+      </ul>
+    </div>
+    <div class="task-manager">
+      <h1>Task Manager</h1>
+      <form id="task-form">
+        <div class="form-group">
+          <input type="text" class="form-control" id="task-input" placeholder="Enter a task">
+        </div>
+        <button type="submit" class="btn btn-secondary">Add Task</button>
+      </form>
+      <ul id="task-list" class="list-group mt-3">
+        <!-- Task items will be dynamically added here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
