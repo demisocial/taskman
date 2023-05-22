@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fullcalendar.io/releases/main/core/main.css' rel='stylesheet' />
+  <link href='https://fullcalendar.io/releases/main/daygrid/main.css' rel='stylesheet' />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul class="sidebar-list">
+        <li class="sidebar-item">Overview</li>
+        <li class="sidebar-item"><a href="index.html">My Tasks</a></li>
+        <li class="sidebar-item"><a href="calendar.html">Calendar</a></li>
+        <li class="sidebar-item">Help/Guide</li>
+        <li class="sidebar-item">Settings</li>
+      </ul>
+    </div>
+    <div class="task-manager">
+      <div id="calendar"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.7/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.7/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.7/index.global.min.js'></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+  </script>
+
+</body>
+</html>
