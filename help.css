@@ -1,0 +1,62 @@
+body {
+  background-color: #59b1f9;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #fff;
+  color: #696969;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.help-guide {
+    background-color: #696969;
+  width: 75%;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #696969;
+  color: #ffffff;
+}
+
+.help-content {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  margin: 20px;
+  padding-left: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  color: #696969;
+}
+
+p, ol, ul {
+  margin-bottom: 20px;
+}
+
+ol, ul {
+  padding-left: 20px;
+}

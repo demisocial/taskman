@@ -11,11 +11,12 @@ $(document).ready(function() {
 
       var taskItem = $('<li>')
         .addClass('list-group-item task-item')
+        .attr('data-task-id', i); // Add data attribute to associate task details with the task element
 
       var taskTitle = $('<span>')
         .addClass('task-title')
         .text(task.title);
-      
+
       var expandButton = $('<button>')
         .addClass('btn btn-primary expand-button')
         .text('Expand');
@@ -32,13 +33,13 @@ $(document).ready(function() {
       var taskContainer = $('<div>').addClass('task-container');
 
       var hideButton = $('<button>').text('Hide').addClass('btn btn-primary btn-lg hide-button').css('position', 'absolute').css('bottom', '0').css('left', '0');
-      
+
       hideButton.click(function() {
         $(this).parent().removeClass('active');
       });
-      
+
       taskContainer.append(hideButton);
-      
+
       taskItem.one('click', function() {
         $(this).find('.task-container').addClass('active');
       });
@@ -105,19 +106,43 @@ $(document).ready(function() {
       taskContainer.append(leftSection, rightSection);
       taskItem.append(taskContainer);
       taskListElement.append(taskItem);
+
+      // Save task details using data attributes
+      taskItem.data('subtasks', []);
+      taskItem.data('priority', 'high');
+      taskItem.data('dueDate', '');
+      taskItem.data('status', 'not-started');
+      taskItem.data('collaborators', '');
+
+      // Add event listeners to capture and store the task details
+      prioritySelect.change(function() {
+        taskItem.data('priority', $(this).val());
+      });
+
+      dueDateInput.change(function() {
+        taskItem.data('dueDate', $(this).val());
+      });
+
+      statusSelect.change(function() {
+        taskItem.data('status', $(this).val());
+      });
+
+      collaboratorsInput.change(function() {
+        taskItem.data('collaborators', $(this).val());
+      });
     }
   }
 
-    $('#task-form').submit(function(event) {
-     event.preventDefault();
+  $('#task-form').submit(function(event) {
+    event.preventDefault();
     var taskInput = $('#task-input');
     var taskTitle = taskInput.val();
 
-      if (taskTitle.trim() !== '') {
-       var task = { title: taskTitle };
+    if (taskTitle.trim() !== '') {
+      var task = { title: taskTitle };
       taskList.push(task);
       taskInput.val('');
       renderTasks();
     }
   });
-})
+});

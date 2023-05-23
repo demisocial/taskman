@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul class="sidebar-list">
+        <li class="sidebar-item"><a href="profile.html">My Profile</a></li>
+        <li class="sidebar-item"><a href="index.html">My Tasks</a></li>
+        <li class="sidebar-item"><a href="calendar.html">Calendar</a></li>
+        <li class="sidebar-item"><a href="help.html">Help/Guide</a></li>
+        <li class="sidebar-item">Settings</li>
+      </ul>
+    </div>
+    <div class="settings">
+      <h1>Settings</h1>
+      <div class="settings-content">
+        <h2>Task Manager Settings</h2>
+        <h3>General Settings</h3>
+        <div class="form-group">
+          <label for="theme-select">Theme:</label>
+          <select id="theme-select" class="form-control">
+            <option value="default">Default</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+        <h3>Notification Settings</h3>
+        <div class="form-group">
+          <label for="notification-checkbox">Enable Notifications:   :</label>
+          <input type="checkbox" id="notification-checkbox">
+        </div>
+        <div class="form-group">
+          <label for="notification-time">Notification Time:</label>
+          <input type="time" id="notification-time" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="language-select">Language:</label>
+            <select id="language-select" class="form-control">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+            </select>
+          </div>
+          <h2>Privacy Settings</h2>
+          <div class="form-group">
+            <label for="public-profile-checkbox">Public Profile:   :</labels>
+            <input type="checkbox" id="notification-checkbox">
+          </div>
+          <div class="form-group">
+            <label for="data-sharing-checkbox">Data Sharing:   :</label>
+            <input type="checkbox" id="notification-checkbox">
+          </div>
+          <h2>Account Settings</h2>
+          <div class="form-group">
+            <label for="change-password-button">Change Password:   </label>
+            <button id="change-password-button" type="button" class="btn btn-secondary">Click here to change Password</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

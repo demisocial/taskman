@@ -4,18 +4,18 @@
   <title>Calendar</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link href='https://fullcalendar.io/releases/main/core/main.css' rel='stylesheet' />
-  <link href='https://fullcalendar.io/releases/main/daygrid/main.css' rel='stylesheet' />
+  <link href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.0/main.css' rel='stylesheet' />
+  <link href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.6.0/main.css' rel='stylesheet' />
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
       <ul class="sidebar-list">
-        <li class="sidebar-item">Overview</li>
+        <li class="sidebar-item"><a href="profile.html">My Profile</a></li>
         <li class="sidebar-item"><a href="index.html">My Tasks</a></li>
         <li class="sidebar-item"><a href="calendar.html">Calendar</a></li>
-        <li class="sidebar-item">Help/Guide</li>
-        <li class="sidebar-item">Settings</li>
+        <li class="sidebar-item"><a href="help.html">Help/Guide</a></li>
+        <li class="sidebar-item"><a href="settings.html">Settings</a></li>
       </ul>
     </div>
     <div class="task-manager">
@@ -26,7 +26,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.7/index.global.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.7/index.global.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.7/index.global.min.js'></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
@@ -36,6 +35,6 @@
       calendar.render();
     });
   </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
